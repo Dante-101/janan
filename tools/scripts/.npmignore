@@ -1,0 +1,7 @@
+*
+!build/**/*
+build/**/test/**/*
+*.map
+!package.json
+!README.md
+!default-config.json

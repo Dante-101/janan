@@ -1,0 +1,51 @@
+{
+    "name": "shared",
+    "version": "1.0.0",
+    "description": "Contains code shared by all the tech. Includes code that runs on browsers and nodejs",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "build:watch": "tsc --watch",
+        "clean": "rimraf ./build*",
+        "test": "npm run test:unit",
+        "test:clean": "npm run clean && npm run build && npm run test",
+        "test:unit": "cross-env NODE_PATH=./build NODE_ENV=test mocha --require ./build/shared/test/setup \"./build/shared/**/*.test.js\"",
+        "upgrade-dep": "ncu -u --packageFile package.json && npm i && npm run build && npm run test"
+    },
+    "author": "Gaurav Lahoti",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/bluebird": "3.5.27",
+        "@types/chai": "4.2.3",
+        "@types/chance": "1.0.7",
+        "@types/fs-extra": "8.0.0",
+        "@types/lodash": "4.14.141",
+        "@types/md5": "2.1.33",
+        "@types/mocha": "5.2.7",
+        "@types/request-promise": "4.1.44",
+        "@types/sinon": "7.5.0",
+        "@types/uuid": "3.4.5",
+        "chai": "4.2.0",
+        "fs-extra": "8.1.0",
+        "mocha": "6.2.1",
+        "typescript": "3.6.3",
+        "winston": "3.2.1"
+    },
+    "dependencies": {
+        "aws-sdk": "2.543.0",
+        "bluebird": "3.7.0",
+        "chance": "1.1.0",
+        "cpx": "1.5.0",
+        "cross-env": "6.0.3",
+        "date-fns": "2.4.1",
+        "date-fns-tz": "1.0.7",
+        "lodash": "4.17.15",
+        "query-string": "6.8.3",
+        "request-promise": "4.2.4",
+        "reselect": "4.0.0",
+        "rimraf": "3.0.0",
+        "sinon": "7.5.0",
+        "tslib": "1.10.0",
+        "uuid": "3.3.3"
+    }
+}

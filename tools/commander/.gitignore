@@ -1,0 +1,4 @@
+all.js
+*.log
+logs
+last-run.log.json

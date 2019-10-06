@@ -1,0 +1,43 @@
+{
+  "name": "commander",
+  "version": "1.0.0",
+  "description": "Tool to run standard npm commands across all dirs",
+  "scripts": {
+    "install:all": "npm start -- install",
+    "test": "echo \"No test defined\"",
+    "test:all": "npm start -- test",
+    "test:server": "npm start -- test:server",
+    "build": "tsc",
+    "build:prod": "npm start -- build:prod",
+    "build:all": "npm start -- build",
+    "compile:all": "npm start -- compile",
+    "clean": "rimraf ./build ./logs",
+    "start": "cross-env NODE_PATH=./build NODE_ENV=development node ./build/tools/commander/src/cli.js",
+    "upgrade-dep:all": "npm start -- upgrade-dep"
+  },
+  "repository": {},
+  "bin": "./bin/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bluebird": "3.5.27",
+    "@types/fs-extra": "7.0.0",
+    "@types/lodash": "4.14.134",
+    "@types/node": "12.0.8",
+    "@types/request": "2.48.1",
+    "@types/request-promise": "4.1.44",
+    "@types/url-parse": "1.4.3"
+  },
+  "dependencies": {
+    "bluebird": "3.5.5",
+    "colors": "1.3.3",
+    "cross-env": "5.2.0",
+    "fs-extra": "8.0.1",
+    "request": "2.88.0",
+    "request-promise": "4.2.4",
+    "rimraf": "2.6.3",
+    "url-parse": "1.4.7",
+    "winston": "3.2.1"
+  }
+}

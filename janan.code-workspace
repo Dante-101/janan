@@ -1,0 +1,25 @@
+{
+	"folders": [
+	    {
+			"path": "shared"
+		},
+		{
+			"path": "shared-browser"
+		},
+		{
+			"path": "shared-node"
+		},
+		{
+			"path": "server"
+		},
+		{
+			"path": "apps/app-template"
+		},
+		{
+			"path": "tools/commander"
+		},
+		{
+			"path": "tools/scripts"
+		}
+	]
+}

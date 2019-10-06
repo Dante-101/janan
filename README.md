@@ -1,2 +1,12 @@
-# janan
-A Web framework to build connected webapps, native apps, server and tools using Typescript and Node.js
+# Janan
+A framework & template to build resilient, type safe webapps, hybrid apps, server and tools quickly using Typescript and Node.js
+
+## Stack
+* Programming Language: Typescript
+* Server: Node.js
+* Database: MongoDb
+* Auth: JSON Web Tokens (JWT)
+* Tests: NYC
+* Misc: Few things added for AWS (for instance reading `x-forwarded-*` headers)
+
+## Code Structure
