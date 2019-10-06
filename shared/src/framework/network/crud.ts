@@ -23,7 +23,7 @@ import {
     UpsertSpec,
 } from '../models/db'
 import { getGlobalApiClient, makeApiClientReqObj } from './api-client'
-import { ApiUrl } from './api-url'
+import { ApiUrlGen } from './api-url-gen'
 import { jsonContentType } from './headers'
 
 export const CrudReqActionEnum = strEnum(["insert", "get", "fetch", "count", "update", "upsert", "update-one-obj", "replace-one", "replace-one-obj", "delete"])
@@ -36,7 +36,7 @@ export class CrudRequest<T extends object, U extends T & PersistableObject = T &
 
     //Returns the body of the response if it was successful
     private makeCrudReq = async <T extends object>(body: object, crudOp: CrudReqActionType): Promise<T> => {
-        const urlPath = ApiUrl.v1(this.restUrlClassName, crudOp)
+        const urlPath = ApiUrlGen.v1(this.restUrlClassName, crudOp)
         const reqObj = makeApiClientReqObj(urlPath, body, undefined, this.host, this.authToken)
         reqObj.headers.Accept = jsonContentType
         const apiClient = getGlobalApiClient()

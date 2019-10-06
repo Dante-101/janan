@@ -1,5 +1,5 @@
-import { ObjKeys, RequiredKeys } from '../../common/types'
-import { isObjectLiteral } from '../../common/validation'
+import { RequiredKeys } from '../../common/types'
+import { isPlainObject } from '../../common/validation'
 
 export interface IdObj { id: string }
 
@@ -27,7 +27,7 @@ export type InsertSpec<T extends object> = {
     checkFieldsPresence?: RequiredKeys<T>[]
 }
 
-export const isInsertSpec = (spec: any): spec is InsertSpec<any> => isObjectLiteral(spec) && spec.objs && Array.isArray(spec.objs)
+export const isInsertSpec = (spec: any): spec is InsertSpec<any> => isPlainObject(spec) && spec.objs && Array.isArray(spec.objs)
 
 export type DbOneObjType<T extends object> = IdObj & T & Partial<MetaObj>
 
@@ -59,7 +59,7 @@ export interface UpdateSpec<T extends PersistableObject> {
 export interface UpsertSpec<T extends object> extends InsertSpec<T> {
     //for objs without id, values of fields from uniqueFieldSet is used to figure out the obj to update.
     // Combination of values of these fields should be unique
-    uniqueFieldSet?: (ObjKeys<T>)[]
+    uniqueFieldSet?: (keyof T)[]
 }
 
 export interface ReplaceSpec<T extends object, U extends T & PersistableObject = T & PersistableObject> {
