@@ -13,7 +13,7 @@
         "upgrade-dep": "ncu -u --packageFile package.json && npm i && npm run build && npm run test"
     },
     "author": "Gaurav Lahoti",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
         "@types/bluebird": "3.5.27",
         "@types/chai": "4.2.3",

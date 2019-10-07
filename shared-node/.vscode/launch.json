@@ -2,30 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
-            "type": "node",
-            "request": "launch",
-            "program": "${workspaceFolder}/src/main.ts",
-            "stopOnEntry": false,
-            "args": [
-                "static=\"../../../public-html\""
-            ],
-            "cwd": "${workspaceFolder}",
-            "preLaunchTask": null,
-            "runtimeExecutable": null,
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "console": "integratedTerminal",
-            "sourceMaps": true,
-            "outFiles": [
-                "${workspaceFolder}/build/**/*.js"
-            ]
-        },
-        {
             "name": "Mocha + Build",
             "type": "node",
             "request": "launch",
