@@ -80,7 +80,7 @@
     "@types/xml2js": "0.4.4",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
-    "express-jwt": "5.3.1",
+    "express-jwt": "6.0.0",
     "mocha": "6.2.0",
     "sinon": "7.3.2",
     "tar": "4.4.10",
