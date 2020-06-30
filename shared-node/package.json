@@ -52,7 +52,7 @@
     "cpx": "1.5.0",
     "cross-env": "6.0.3",
     "date-fns-tz": "1.0.7",
-    "express-jwt": "5.3.1",
+    "express-jwt": "6.0.0",
     "extract-zip": "1.6.7",
     "fs-extra": "8.1.0",
     "imagemin-pngquant": "8.0.0",
