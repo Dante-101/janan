@@ -35,7 +35,7 @@
     "fs-extra": "8.1.0",
     "glob": "7.1.4",
     "hasbin": "1.2.3",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "md5": "2.2.1",
     "nodemon": "1.19.1",
     "query-string": "6.8.2",
